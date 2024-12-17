@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">ComposableVADisabilityCalc</string>
+    <string name="welcome_text">Welcome to Dee Lite Studios \nVA Disability Calculator</string>
+    <string name="intro_instructions">Please enter your unique user name and password, then select (Login).\nIf you are a new user select (Register).</string>
+</resources>
