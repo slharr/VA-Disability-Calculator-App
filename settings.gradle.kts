@@ -19,6 +19,5 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "VA Disability Calc"
+rootProject.name = "ComposableVADisabilityCalc"
 include(":app")
- 

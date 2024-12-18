@@ -1,22 +1,5 @@
 <resources>
-    <string name="app_name">VA Disability Calc</string>
-    <string name="dee_lite_studios">Dee Lite Studios \nVA Disability Calculator</string>
-    <string name="login_name">Name(Case sensitive)</string>
-    <string name="password">Password</string>
-    <string name="error_logging">ERROR LOGGING</string>
-    <string name="submit_reg">SUBMIT</string>
-    <string name="registration_button">REGISTRATION</string>
-    <string name="back_to_log_in">Back to log In</string>
-    <string name="log_in">Log In</string>
-    <string name="disability_percentage">Disability Percentage</string>
-    <string name="bilateral_factor">Check if this disability has bilateral factor.</string>
-    <string name="next_item">NEXT ITEM</string>
-    <string name="submit_for_results">SUBMIT FOR RESULTS</string>
-    <string name="name_of_disability">Name of disability</string>
-    <string name="disability_nomenclature">Disability Nomenclature</string>
-    <string name="va_data">Please input your VA data:</string>
-    <string name="disabilties_show">Hello</string>
-    <string name="delete">DELETE</string>
-    <string name="delete_item">Delete Item</string>
-
+    <string name="app_name">ComposableVADisabilityCalc</string>
+    <string name="welcome_text">Welcome to Dee Lite Studios \nVA Disability Calculator</string>
+    <string name="intro_instructions">Please enter your unique user name and password, then select (Login).\nIf you are a new user select (Register).</string>
 </resources>
