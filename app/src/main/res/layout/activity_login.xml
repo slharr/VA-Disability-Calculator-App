@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".LoginActivity"
+    android:paddingBottom="0dp"
+    android:paddingTop="16dp"
+    android:background="@drawable/arrow_image"
+    android:layout_marginBottom="0dp"
+    >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/my_primary"
+        android:alpha="0.09">
+
+        <TextView
+            android:layout_width="1643dp"
+            android:layout_height="200dp"
+            android:fontFamily="sans-serif-medium"
+            android:text="@string/dee_lite_studios"
+            android:textColor="@color/black"
+            android:textSize="32sp"
+            android:textStyle="bold" />
+
+    </RelativeLayout>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="30dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        app:cardCornerRadius="28dp"
+        android:layout_marginBottom="40dp"
+        >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="45dp">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Welcome"
+                android:textColor="@color/my_primary"
+                android:textSize="32sp"
+                android:textStyle="bold"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Please log in with your information."
+                android:alpha="0.5"/>
+            <View
+                android:layout_width="wrap_content"
+                android:layout_height="20dp"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/login_name"
+                android:textStyle="bold"
+                android:alpha="0.5" />
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawableEnd="@drawable/name_done"
+                android:inputType="text"
+                android:id="@+id/name"
+                android:minHeight="48dp"
+                tools:ignore="SpeakableTextPresentCheck"
+                android:hint="Enter your full name"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/password"
+                android:textStyle="bold"
+                android:alpha="0.5" />
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawableEnd="@drawable/password_icon"
+                android:inputType="text"
+                android:id="@+id/password"
+                android:minHeight="48dp"
+                tools:ignore="SpeakableTextPresentCheck"
+                android:hint="Enter a password"/>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <CheckBox
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Remember me."
+                    android:layout_centerVertical="true"
+                    android:alpha="0.5"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:id="@+id/error"
+                    android:text="@string/error_logging"
+                    android:layout_marginStart="140dp"
+                    android:layout_marginEnd="20dp"
+                    android:textColor="@color/red"
+                    android:visibility="gone"
+                    android:layout_height="wrap_content"/>
+                <ProgressBar
+                    android:layout_width="wrap_content"
+                    android:id="@+id/loading"
+                    android:layout_marginStart="220dp"
+                    android:layout_marginEnd="20dp"
+                    android:visibility="gone"
+                    android:layout_height="wrap_content"/>
+
+            </RelativeLayout>
+            <View
+                android:layout_width="wrap_content"
+                android:layout_height="10dp"/>
+
+            <com.google.android.material.button.MaterialButton
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:text="@string/log_in"
+                android:id="@+id/submitData"
+                app:cornerRadius="32dp"
+                android:onClick="OnLogin"/>
+
+            <com.google.android.material.button.MaterialButton
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:text="@string/registration_button"
+                android:id="@+id/go_to_registration"
+                app:cornerRadius="32dp"
+                android:backgroundTint="@color/my_secondary"
+                android:onClick="OnRegistration"
+                />
+
+
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</RelativeLayout>

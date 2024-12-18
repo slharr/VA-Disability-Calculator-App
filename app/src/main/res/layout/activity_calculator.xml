@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".CalculatorActivity"
+    android:paddingBottom="40dp"
+    android:paddingTop="14dp"
+    android:background="@drawable/arrow_image"
+    android:layout_marginBottom="10dp"
+    >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/my_primary"
+        android:alpha="0.09">
+
+    </RelativeLayout>
+
+    <ListView
+        android:id="@+id/disability_list_view"
+        android:layout_width="1643dp"
+        android:layout_height="270dp"
+        android:fontFamily="sans-serif-medium"
+        android:textColor="@color/my_third"
+        android:textSize="10sp"
+        android:textStyle="bold"/>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        app:cardCornerRadius="28dp"
+        >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="10dp">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id = "@+id/textYourin"
+                android:text="You're in!"
+                android:textColor="@color/my_primary"
+                android:textSize="20sp"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/va_data"
+                android:alpha="0.5"/>
+            <View
+                android:layout_width="wrap_content"
+                android:layout_height="10dp"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/disability_nomenclature"
+                android:textStyle="bold"
+                android:alpha="0.5"/>
+
+            <EditText
+                android:id="@+id/disabilityName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawableEnd="@drawable/name_done"
+                android:inputType="text"
+                android:hint = "@string/name_of_disability"
+                android:minHeight="48dp" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/disability_percentage"
+                android:textStyle="bold"
+                android:alpha="0.5"/>
+
+            <EditText
+                android:id="@+id/disabilityPercentage"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawableEnd="@drawable/password_icon"
+                android:inputType="number"
+                android:hint="percentage value"
+                android:minHeight="48dp"/>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <CheckBox
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/bilateral_factor"
+                    android:layout_centerVertical="true"
+                    android:id="@+id/bilateral_factor"
+                    android:alpha="0.5"/>
+               
+            </RelativeLayout>
+            <View
+                android:layout_width="wrap_content"
+                android:layout_height="10dp"/>
+
+            <com.google.android.material.button.MaterialButton
+                android:layout_width="match_parent"
+                android:id="@+id/nextItem"
+                android:layout_height="60dp"
+                android:backgroundTint="@color/my_secondary"
+                android:textSize="20sp"
+                android:text="@string/next_item"
+                app:cornerRadius="32dp"/>
+
+            <com.google.android.material.button.MaterialButton
+                android:layout_width="match_parent"
+                android:id="@+id/submitInfo"
+                android:layout_height="48dp"
+                android:text="@string/submit_for_results"
+                app:cornerRadius="32dp"/>
+
+        </LinearLayout>
+
+
+    </androidx.cardview.widget.CardView>
+
+</RelativeLayout>
