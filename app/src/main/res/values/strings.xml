@@ -2,4 +2,5 @@
     <string name="app_name">ComposableVADisabilityCalc</string>
     <string name="welcome_text">Welcome to Dee Lite Studios \nVA Disability Calculator</string>
     <string name="intro_instructions">Please enter your unique user name and password, then select (Login).\nIf you are a new user select (Register).</string>
+    <string name="donate_message">Thank you for choosing this application. If you enjoyed this App, please consider making a donation to Dee Lite Studios, a new and upstarting software development company, so that we can continue to create and improve for your enjoyment. To do so click the following link:</string>
 </resources>

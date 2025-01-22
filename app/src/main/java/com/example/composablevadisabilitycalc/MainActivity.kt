@@ -46,12 +46,15 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.platform.LocalContext
+import androidx.compose.ui.platform.LocalUriHandler
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
+import androidx.compose.ui.text.AnnotatedString
 import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.input.KeyboardType
 import androidx.compose.ui.text.input.PasswordVisualTransformation
 import androidx.compose.ui.text.input.VisualTransformation
+import androidx.compose.ui.text.style.TextDecoration
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
@@ -649,9 +652,32 @@ fun CalculateScreen(navController: NavHostController, dbHelper: DatabaseHelper, 
             ) {
                 Text("FINISH & EXIT")
             } // Finish Button
+
+            Spacer(modifier = Modifier.height(60.dp))
+            DonationMessage()
         } // End of Column
     } // End of Box
 }// end CalculateScreen function
+
+@Composable
+fun DonationMessage() {
+    val uriHandler = LocalUriHandler.current
+    Text(
+        text = stringResource(R.string.donate_message),
+        color = my_primary, // Text in custom color
+        fontSize = 16.sp, // 16.sp font size
+        modifier = Modifier.padding(bottom = 8.dp)
+    )
+    Text(
+        text = AnnotatedString("https://www.paypal.com/donate/?hosted_button_id=2PR9KAC7C3Y5J"),
+        color = Color.Blue, // Color for the link
+        textDecoration = TextDecoration.Underline,
+        modifier = Modifier
+            .clickable { uriHandler.openUri("https://www.paypal.com/donate/?hosted_button_id=2PR9KAC7C3Y5J") }
+            .padding(top = 8.dp)
+    )
+}
+
 
 @Preview(showBackground = true)
 @Composable
