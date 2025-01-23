@@ -5,11 +5,11 @@ plugins {
 }
 
 android {
-    namespace = "com.example.composablevadisabilitycalc"
+    namespace = "com.deelitestudios.composablevadisabilitycalc"
     compileSdk = 34
 
     defaultConfig {
-        applicationId = "com.example.composablevadisabilitycalc"
+        applicationId = "com.deelitestudios.composablevadisabilitycalc"
         minSdk = 24
         targetSdk = 34
         versionCode = 1
