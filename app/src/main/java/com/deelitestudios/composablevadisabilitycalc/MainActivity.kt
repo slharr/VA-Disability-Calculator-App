@@ -391,7 +391,11 @@ fun DisabilitiesEntry(navController: NavHostController, dbHelper: DatabaseHelper
 
             Text("List:")
 
-            LazyColumn {
+            LazyColumn (
+                modifier = Modifier
+                    .weight(1f) // Makes the list scrollable without pushing buttons
+                    .fillMaxWidth()
+            ){
                 items(disabilities) { (id, name, percentage) ->
                     val isSelected = selectedDisability?.first == id
                     Row(
@@ -604,7 +608,11 @@ fun CalculateScreen(navController: NavHostController, dbHelper: DatabaseHelper, 
 
             Text("Sorted List:")
 
-            LazyColumn {
+            LazyColumn (
+                modifier = Modifier
+                    .weight(1f) // Makes the list scrollable without pushing buttons
+                    .fillMaxWidth()
+            ){
                 items(disabilities) { ( id, disability, percentage) ->
                     // id value must remain in order to correctly display values of dis and percentage
                     Row(
